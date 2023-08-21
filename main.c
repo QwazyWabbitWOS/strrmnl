@@ -10,7 +10,7 @@ Return: length of resulting string */
 size_t StrRemoveTrailingNewlines(char* str)
 {
     char* p = str + strlen(str) - 1;
-    while (*p == '\n' && p >= str)
+    while (p >= str && *p == '\n')
     {
         *p = '\0';
         p--;
